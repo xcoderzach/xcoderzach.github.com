@@ -1,15 +1,11 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>coderza.ch - Zach Smith's Blog</title>
-    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!--[if IE]>
-      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Zach Smith Blogs Here</h1>
-  </body>
-</html>
+---
+layout: layout
+---
+
+<ul class = "posts">
+{% for post in site.posts %}
+  <li class = "post">
+    <a class = "title" href="{{ post.url }}">{{ post.title }}</a><div class = "date">{{ post.date | date: "%B %e, %Y" }}</div>
+  </li>
+{% endfor %}
+</ul>
